@@ -1,0 +1,67 @@
+/* Create a "psychic duck" that gives out a random reply from a list of 
+preset replies in an array, while changing expressions. Steps are numbered. 
+*/
+
+// -- 1
+// Create variables. 
+
+var replies = ["Chinese Men Outnumber Women by 33 Million After Decades of Gender Bias", "China's gender ratio peaked far above the global average of 107 in 2004 at 121.18, and fell to 115.8 in 2014", "the gender imbalance in China's population can be traced back to the start of the ‘one child policy’ during the 1970s", "China's population stood at 1.36 billion at the end of last year, of whom 700 million are men and 667 million are women."]; // list of replies, order must correspond with the right sound file
+var randomNum = 0; // this variable will hold the current randomized number to pull from the replies array
+var randomEyes = 0; // variable that holds random number to pull a new eye expression, separate variable because the amount of eyes exceed the amount of replies
+
+
+// create function to play sound based off of random variable being passed
+function playSounds(r) {
+
+//YOUR CODE HERE
+audioElement.setAttribute('src',"assets/sound/"+sounds[r]+".mp3");
+audioElement.play();
+
+}
+
+// create a function that returns a random number within the limits of the array length. 
+// function passes name of the array, so we can use one function for different arrays with different lengths
+function randomNumGenerator(arrayName) { // create random number for random reply
+
+//YOUR CODE HERE
+return Math.floor(Math.random() * arrayName.length);
+
+}
+
+// -- Create a function to bring the duck to life.
+function answerQuestion () {
+  randomNum = randomNumGenerator(replies);
+  console.log("Random reply: " + randomNum);
+
+//YOUR CODE HERE
+  $('#speech').text(replies[randomNum]);
+  // playSounds(randomNum);
+
+  //change eyes
+  // randomEyes = randomNumGenerator(eyes);
+  // $('#eyes').css("background","url('assets/img/"+eyes[randomEyes] +".png') no-repeat");
+  // $('#eyes').css("background-size","100% auto");
+
+}
+
+// -- step 3
+// init function will initialize the rest of the functions
+function init() {
+  console.log('Hello World'); // check to see if script is linked properly and running
+
+//YOUR CODE HERE
+  audioElement = document.createElement('audio');
+  audioElement.setAttribute('autoplay', 'autoplay');
+  
+  $("#submit").click(function(){
+    answerQuestion();
+  });
+
+}
+
+// -- step 2
+// wait until dom is loaded then run init function
+$(document).ready(function(){
+  init();
+  console.log( "ready!" );
+}); 
