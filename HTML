@@ -1,0 +1,210 @@
+<html>
+<head>
+<title>My First map using FusionCharts Suite XT</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style02.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/fusioncharts.js"></script>
+<script type="text/javascript" src="js/themes/fusioncharts.theme.fint.js"></script>
+<script type="text/javascript" src="js/java/script.js"></script>
+<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+<div id="chartchina">
+    <script src="test.js"></script>
+<script type="text/javascript" >
+  FusionCharts.ready(function () {
+   var salesByState = new FusionCharts({
+        "type": "maps/china2",
+        "renderAt": "chartContainer",
+        "width": "600",
+        "height": "400",
+        "dataFormat": "json",
+        "dataSource": {
+            "chart": {
+                "caption": "Sex ratio of birth in China 2010",
+                "subcaption": "Unit : male births per female births",
+                "entityFillHoverColor": "#cccccc",
+                "numberScaleValue": "1,1000,1000",
+                "numberScaleUnit": "male births per female births",
+                "showLabels": "1",
+                "theme": "fint"
+            },
+            "colorrange": {
+                "minvalue": "100",
+                "startlabel": "Low",
+                "endlabel": "High",
+                "code": "#d3f900",
+                "gradient": "1",
+                "color": [
+                    {
+                        "maxvalue": "115",
+                        "displayvalue": "Average",
+                        "code": "#ff9000"
+                    },
+                    {
+                        "maxvalue": "130",
+                        "code": "#ff4800"
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "id": "CN.AH",
+                    "value": "126"
+                },
+                {
+                    "id": "CN.BJ",
+                    "value": "111"
+                },
+                {
+                    "id": "CN.CQ",
+                    "value": "112"
+                },
+                {
+                    "id": "CN.FJ",
+                    "value": "127"
+                },
+                {
+                    "id": "CN.GS",
+                    "value": "116"
+                },
+                {
+                    "id": "CN.GD",
+                    "value": "121"
+                },
+                {
+                    "id": "CN.GX",
+                    "value": "121.4"
+                },
+                {
+                    "id": "CN.GZ",
+                    "value": "123"
+                },
+                {
+                    "id": "CN.HA",
+                    "value": "127"
+                },
+                {
+                    "id": "CN.HB",
+                    "value": "112"
+                },
+                {
+                    "id": "CN.HL",
+                    "value": "111"
+                },
+                {
+                    "id": "CN.HE",
+                    "value": "117"
+                },
+                {
+                    "id": "CN.HK",
+                    "value": "no data"
+                },
+                {
+                    "id": "CN.HU",
+                    "value": "120"
+                },
+                {
+                    "id": "CN.HN",
+                    "value": "123"
+                },
+                {
+                    "id": "CN.JS",
+                    "value": "118"
+                },
+                {
+                    "id": "CN.JX",
+                    "value": "122"
+                },
+                {
+                    "id": "CN.JL",
+                    "value": "111"
+                },
+                {
+                    "id": "CN.LN",
+                    "value": "114"
+                },
+                {
+                    "id": "CN.MA",
+                    "value": "no data"
+                },
+                {
+                    "id": "CN.NM",
+                    "value": "112"
+                },
+                {
+                    "id": "CN.NX",
+                    "value": "114"
+                },
+                {
+                    "id": "CN.QH",
+                    "value": "114"
+                },
+                {
+                    "id": "CN.SA",
+                    "value": "113"
+                },
+                {
+                    "id": "CN.SD",
+                    "value": "115"
+                },
+                {
+                    "id": "CN.SH",
+                    "value": "110"
+                },
+                {
+                    "id": "CN.SX",
+                    "value": "111"
+                },
+                {
+                    "id": "CN.SC",
+                    "value": "113"
+                },
+                {
+                    "id": "CN.TA",
+                    "value": "106"
+                },
+                {
+                    "id": "CN.TJ",
+                    "value": "109"
+                },
+                {
+                    "id": "CN.XZ",
+                    "value": "103"
+                },
+                {
+                    "id": "CN.XJ",
+                    "value": "107"
+                },
+                {
+                    "id": "CN.YN",
+                    "value": "113"
+                },
+                {
+                    "id": "CN.ZJ",
+                    "value": "119"
+                }
+            ]
+        }
+    });
+    salesByState.render();
+});
+</script>
+</div>
+
+
+</head>
+<body>
+    <div id="chartContainer">FusionMaps XT will load s map here!</div>
+        <p id="speech"> </p>
+
+    <div id="questionForm">
+    <form>
+    <div id="submit">Click to Know a Fact about the Gender Distribution</div>
+    </form>
+    </div>
+
+    <script type="text/javascript">
+        console.log('Hello World');
+    </script>
+</body>
+</html>
